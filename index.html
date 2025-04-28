@@ -9,46 +9,52 @@
   <link rel="stylesheet" href="./src/styles.css">
   <title>E-commerce product page</title>
 </head>
-<body class="font-smooth relative z-auto">
+<body class="font-smooth font-kumbh-sans relative z-auto">
 
-  <header class="flex justify-between items-center lg:py-[1rem] lg:px-[5rem] w-full z-10 bg-white">
-    <div class="flex items-center justify-between gap-[4rem]">
-      <img 
-        src="./images/icon-menu.svg" 
-        alt="hamburger menu"
-        class="lg:hidden"
-        id="hamburger-menu"
-      >
-      <img 
-        src="./images/logo.svg" 
-        alt="logo"
-        class=""
-      >
-      <ul class="lg:flex lg:gap-[2rem]">
-        <li><a href="#collections">Collections</a></li>
-        <li><a href="#men">Men</a></li>
-        <li><a href="#women">Women</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
+  <header class="lg:border-b-2 lg:border-black">
+    <div class="flex justify-between items-center p-[1rem] lg:py-[2rem] lg:px-[5rem] w-full z-10 bg-white">
+      <div class="flex items-center justify-between gap-[1rem] lg:gap-[4rem]">
+        <img 
+          src="./images/icon-menu.svg" 
+          alt="hamburger menu"
+          class="lg:hidden"
+          id="hamburger-menu"
+        >
+        <img 
+          src="./images/logo.svg" 
+          alt="logo"
+          class=""
+        >
+        <ul 
+          class="absolute top-0 left-0 min-h-screen w-1/2 bg-white flex-col items-center gap-[2rem] py-[5rem] px-[2rem] z-11 cursor-pointer hidden unset"
+        >
+          <li><a href="#collections" class="text-black/75">Collections</a></li>
+          <li><a href="#men" class="text-black/75">Men</a></li>
+          <li><a href="#women" class="text-black/75">Women</a></li>
+          <li><a href="#about" class="text-black/75">About</a></li>
+          <li><a href="#contact" class="text-black/75">Contact</a></li>
+        </ul>
+      </div>
 
-    <div class="flex items-center justify-between lg:gap-[4rem] gap-[1rem]">
-      <img 
-        src="./images/icon-cart.svg" 
-        alt="cart icon"
-        class=""
-      >
-      <img 
-        src="./images/image-avatar.png" 
-        alt="avatar" 
-        class="lg:w-12 lg:h-12 w-9 h-9"
-      >
+      <div class="flex items-center justify-between lg:gap-[4rem] gap-[1rem]">
+        <img 
+          src="./images/icon-cart.svg" 
+          alt="cart icon"
+          class=""
+        >
+        <img 
+          src="./images/image-avatar.png" 
+          alt="avatar" 
+          class="lg:w-12 lg:h-12 w-9 h-9"
+        >
+      </div>
     </div>
   </header>
 
-  <main class="flex flex-col">
-    <section class=""></section>
+  <main class="flex flex-col lg:flex-row">
+    <section class="">
+      <img src="./images/image-product-1.jpg" alt="">
+    </section>
 
     <section class="">
       Sneaker Company

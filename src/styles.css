@@ -19,8 +19,13 @@
       -moz-osx-font-smoothing: grayscale;
     }
 }
-.unset {
-    all: unset;
+@media (min-width: 1024px) {
+    .unset {
+        all: unset;
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+    }
 }
 
 
