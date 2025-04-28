@@ -19,4 +19,22 @@
       -moz-osx-font-smoothing: grayscale;
     }
 }
+.unset {
+    all: unset;
+}
+
+
+/* Header styles */
+ul {
+    list-style: none;
+}
+a,
+a:link,
+a:visited,
+a:focus,
+a:hover {
+    display: inline-block;
+    text-decoration: none;
+    font-size: inherit;
+}
   

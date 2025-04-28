@@ -9,27 +9,63 @@
   <link rel="stylesheet" href="./src/styles.css">
   <title>E-commerce product page</title>
 </head>
-<body class="font-smooth">
+<body class="font-smooth relative z-auto">
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+  <header class="flex justify-between items-center lg:py-[1rem] lg:px-[5rem] w-full z-10 bg-white">
+    <div class="flex items-center justify-between gap-[4rem]">
+      <img 
+        src="./images/icon-menu.svg" 
+        alt="hamburger menu"
+        class="lg:hidden"
+        id="hamburger-menu"
+      >
+      <img 
+        src="./images/logo.svg" 
+        alt="logo"
+        class=""
+      >
+      <ul class="lg:flex lg:gap-[2rem]">
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#men">Men</a></li>
+        <li><a href="#women">Women</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
 
-  Sneaker Company
+    <div class="flex items-center justify-between lg:gap-[4rem] gap-[1rem]">
+      <img 
+        src="./images/icon-cart.svg" 
+        alt="cart icon"
+        class=""
+      >
+      <img 
+        src="./images/image-avatar.png" 
+        alt="avatar" 
+        class="lg:w-12 lg:h-12 w-9 h-9"
+      >
+    </div>
+  </header>
 
-  Fall Limited Edition Sneakers
+  <main class="flex flex-col">
+    <section class=""></section>
 
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
+    <section class="">
+      Sneaker Company
 
-  $125.00
-  50%
-  $250.00
+      Fall Limited Edition Sneakers
 
-  0
-  Add to cart
+      These low-profile sneakers are your perfect casual wear companion. Featuring a 
+      durable rubber outer sole, they’ll withstand everything the weather can offer.
+
+      $125.00
+      50%
+      $250.00
+
+      0
+      Add to cart
+    </section>
+  </main>
   <script type="module" src="./src/index.js"></script>
 </body>
 </html>
