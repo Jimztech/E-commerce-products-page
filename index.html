@@ -11,8 +11,8 @@
 </head>
 <body class="font-smooth font-kumbh-sans relative z-auto">
 
-  <header class="lg:border-b-2 lg:border-black">
-    <div class="flex justify-between items-center p-[1rem] lg:py-[2rem] lg:px-[5rem] w-full z-10 bg-white">
+  <header class="lg:px-[5rem]">
+    <div class="flex justify-between items-center p-[1rem] w-full z-10 bg-white lg:border-b-2 lg:border-black/30 lg:py-[2rem]">
       <div class="flex items-center justify-between gap-[1rem] lg:gap-[4rem]">
         <img 
           src="./images/icon-menu.svg" 
@@ -26,13 +26,13 @@
           class=""
         >
         <ul 
-          class="absolute top-0 left-0 min-h-screen w-1/2 bg-white flex-col items-center gap-[2rem] py-[5rem] px-[2rem] z-11 cursor-pointer hidden unset"
+          class="absolute top-0 left-0 min-h-screen w-1/2 bg-white flex-col items-center gap-[2rem] py-[5rem] px-[2rem] z-11 hidden unset"
         >
-          <li><a href="#collections" class="text-black/75">Collections</a></li>
-          <li><a href="#men" class="text-black/75">Men</a></li>
-          <li><a href="#women" class="text-black/75">Women</a></li>
-          <li><a href="#about" class="text-black/75">About</a></li>
-          <li><a href="#contact" class="text-black/75">Contact</a></li>
+          <li><a href="#collections" class="text-black/75 cursor-pointer lg:hover:text-black">Collections</a></li>
+          <li><a href="#men" class="text-black/75 cursor-pointer lg:hover:text-black">Men</a></li>
+          <li><a href="#women" class="text-black/75 cursor-pointer lg:hover:text-black">Women</a></li>
+          <li><a href="#about" class="text-black/75 cursor-pointer lg:hover:text-black">About</a></li>
+          <li><a href="#contact" class="text-black/75 cursor-pointer lg:hover:text-black">Contact</a></li>
         </ul>
       </div>
 
@@ -45,7 +45,7 @@
         <img 
           src="./images/image-avatar.png" 
           alt="avatar" 
-          class="lg:w-12 lg:h-12 w-9 h-9"
+          class="lg:w-12 lg:h-12 lg:hover:border-orange lg:rounded-full lg:border-4 lg:border-transparent w-9 h-9 lg:cursor-pointer"
         >
       </div>
     </div>
@@ -57,12 +57,14 @@
     </section>
 
     <section class="">
-      Sneaker Company
+      <span>Sneaker Company</span>
 
-      Fall Limited Edition Sneakers
+      <h1>Fall Limited Edition Sneakers</h1>
 
-      These low-profile sneakers are your perfect casual wear companion. Featuring a 
-      durable rubber outer sole, they’ll withstand everything the weather can offer.
+      <p>
+        These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.
+      </p>
 
       $125.00
       50%
