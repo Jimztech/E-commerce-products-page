@@ -80,16 +80,56 @@
           src="./images/icon-cart.svg" 
           alt="cart icon"
           class=""
+          id="cart"
         >
         <img 
           src="./images/image-avatar.png" 
           alt="avatar" 
           class="lg:w-12 lg:h-12 lg:hover:border-orange lg:rounded-full lg:border-4 lg:border-transparent w-9 h-9 lg:cursor-pointer"
         >
+        <div class="absolute bg-orange w-5 h-5 top-4 lg:top-8 rounded-full mx-2 hidden">
+          <p id="pop-up" class="text-center text-white">3</p>
+        </div>
       </div>
     </div>
   </header>
 
+  <section class="absolute top-20 right-10 lg:top-25 lg:right-10 w-[18.75rem] bg-white z-[20] lg:shadow-[0_2px_5px_7px_rgba(0,0,0,0.2)] rounded-md py-4 hidden" id="checkout-section">
+    <div class="p-5 border-b-[1px] border-grayish-blue">
+      <p class="font-bold text-black">Cart</p>
+    </div>
+
+    <div class="flex gap-3 items-center p-5">
+      <section>
+        <img 
+          src="./images/image-product-1-thumbnail.jpg" 
+          alt="thumbnail"
+          class="w-15 h-15 rounded-xl"
+        >
+      </section>
+
+      <section>
+        <p>Fall Limited Edition Sneakers</p>
+        <div>
+          <p>
+            <span class="text-dark-grayish-blue">$125.00 </span>x <span id="increment-value" class="text-dark-grayish-blue"> </span> <span id="total" class="font-bold"></span>
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <img 
+          src="./images/icon-delete.svg" 
+          alt="delete icon"
+          id="delete"
+        >
+      </section>
+    </div>
+
+    <div class="flex items-center justify-center bg-orange mx-5 rounded-md">
+      <button  class="text-black font-bold p-3" id="checkout">Checkout</button>
+    </div>
+  </section>
   <div 
     class="flex flex-col lg:flex-row lg:gap-[2rem] lg:py-[4rem] lg:px-[8rem]"
     id="main-content"
@@ -153,11 +193,13 @@
           <img 
             src="./images/icon-minus.svg" 
             alt="minus icon"
+            id="subtract"
           >
-          <p>0</p>
+          <p id="increment-value">0</p>
           <img 
             src="./images/icon-plus.svg" 
             alt="plus icon"
+            id="add"
           >
         </div>
 
@@ -171,7 +213,7 @@
             <path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill-rule="nonzero"/>
           </svg>
 
-          <button class="block font-bold">Add to cart</button>
+          <button class="block font-bold" id="add-to-cart">Add to cart</button>
         </div>
       </section>
     </section>
