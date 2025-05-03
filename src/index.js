@@ -9,6 +9,8 @@ const popUp = document.getElementById("pop-up");
 const checkoutBtn = document.getElementById("checkout");
 const checkoutSection = document.getElementById("checkout-section");
 const addCartBtn = document.getElementById("add-to-cart");
+const deleteIcon = document.getElementById("delete");
+const emptyCart = document.getElementById("empty-cart")
 
 
 function toggleMenu() {
@@ -49,6 +51,11 @@ function updateUi() {
     } else {
         popUp.parentElement.classList.add("hidden");
     }
+
+    // empty cart section
+    if(count > 0) {
+        emptyCart.classList.add("hidden");
+    }
 }
 
 // Add button
@@ -80,3 +87,15 @@ addCartBtn.addEventListener("click", () => {
         checkoutSection.classList.remove("hidden");
     }
 });
+
+// Delete icon operation
+deleteIcon.addEventListener("click", () => {
+    popUp.parentElement.classList.add("hidden");
+
+    checkoutSection.classList.add("hidden");
+
+    emptyCart.classList.remove("hidden");
+
+    count = 0;
+    updateUi();
+})
