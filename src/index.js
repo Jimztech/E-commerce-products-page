@@ -10,7 +10,8 @@ const checkoutBtn = document.getElementById("checkout");
 const checkoutSection = document.getElementById("checkout-section");
 const addCartBtn = document.getElementById("add-to-cart");
 const deleteIcon = document.getElementById("delete");
-const emptyCart = document.getElementById("empty-cart")
+const emptyCart = document.getElementById("empty-cart");
+const cartIcon = document.getElementById("cart");
 
 
 function toggleMenu() {
@@ -24,6 +25,7 @@ function toggleMenu() {
         }
     }
 }
+
 openMenu.addEventListener("click", toggleMenu);
 main.addEventListener("click", () => {
     if(navBar.style.display === "flex") {
@@ -98,4 +100,24 @@ deleteIcon.addEventListener("click", () => {
 
     count = 0;
     updateUi();
-})
+});
+
+// working with cart icon
+cartIcon.addEventListener("click", () => {
+    const isCheckoutVisible = !checkoutSection.classList.contains("hidden");
+    const isEmptyCartVisible = !emptyCart.classList.contains("hidden");
+
+    if(isCheckoutVisible || isEmptyCartVisible) {
+        checkoutSection.classList.add("hidden");
+        emptyCart.classList.add("hidden");
+        return;
+    }
+
+    if(count > 0) {
+        checkoutSection.classList.remove("hidden");
+        emptyCart.classList.add("hidden");
+    } else {
+        emptyCart.classList.remove("hidden");
+        checkoutSection.classList.add("hidden");
+    }
+});
