@@ -141,35 +141,77 @@
     class="flex flex-col lg:flex-row lg:gap-[2rem] lg:py-[4rem] lg:px-[8rem]"
     id="main-content"
   >
-    <section class="">
-      <div>
+    <section class="relative">
+      <div class="relative w-full overflow-hidden">
         <img 
           src="./images/image-product-1.jpg" 
           alt="product image"
-          class="lg:rounded-xl"
+          class="lg:rounded-xl product-img block"
+          id="product-1"
+        >
+
+        <img 
+          src="./images/image-product-2.jpg" 
+          alt="product image 2"
+          class="hidden lg:rounded-xl product-img"
+          id="product-2"
+        >
+
+        <img 
+          src="./images/image-product-3.jpg" 
+          alt="product image 3"
+          class="hidden lg:rounded-xl product-img"
+          id="product-3"
+        >
+
+        <img 
+          src="./images/image-product-4.jpg" 
+          alt="product image 4"
+          class="hidden lg:rounded-xl product-img"
+          id="product-4"
         >
       </div>
+
+      <section class="relative lg:hidden"> 
+        <img 
+          src="./images/icon-previous.svg" 
+          alt="previous icon"
+          class="absolute left-5 bottom-40 rounded-full bg-white p-3 lg:hidden"
+          id="previous-icon"
+        >
+        
+        <img 
+          src="./images/icon-next.svg" 
+          alt="next icon"
+          class="absolute right-5 bottom-40 rounded-full bg-white p-3 lg:hidden"
+          id="next-icon"
+        >
+      </section>
 
       <div class="hidden lg:flex lg:py-6 lg:gap-6">
         <img 
           src="./images/image-product-1-thumbnail.jpg" 
           alt="first thumbnail" 
           class="lg:w-20 lg:h-20 lg:rounded-xl"
+          id="thumbnail-1"
         >
         <img 
           src="./images/image-product-2-thumbnail.jpg" 
           alt="second thumbnail" 
           class="lg:w-20 lg:h-20 lg:rounded-xl"
+          id="thumbnail-2"
         >
         <img 
           src="./images/image-product-3-thumbnail.jpg" 
           alt="third thumbnail" 
           class="lg:w-20 lg:h-20 lg:rounded-xl"
+          id="thumbnail-3"
         >
         <img 
           src="./images/image-product-4-thumbnail.jpg" 
           alt="fourth thumbnail" 
           class="lg:w-20 lg:h-20 lg:rounded-xl"
+          id="thumbnail-4"
         >
       </div>
     </section>

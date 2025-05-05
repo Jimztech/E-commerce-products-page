@@ -121,3 +121,25 @@ cartIcon.addEventListener("click", () => {
         checkoutSection.classList.add("hidden");
     }
 });
+
+// Working with switching images for mobile view.
+const previousMobile = document.getElementById("previous-icon");
+const nextMobile = document.getElementById("next-icon");
+const images = document.querySelectorAll(".product-img");
+let currentIndex = 0;
+
+const showImage = (index) => {
+    images.forEach((img, i) => {
+        img.classList.toggle("hidden", i !== index)
+    });
+}
+
+nextMobile.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+});
+
+previousMobile.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+});
