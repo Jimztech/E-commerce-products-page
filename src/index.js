@@ -164,6 +164,8 @@ function showProduct(index) {
 
 // When main product image is clicked, show lightbox.
 productMain.addEventListener("click", () => {
+
+    console.log("Product main clicked");
     if(window.innerWidth >= 900) {
         mainContent.classList.add("hidden");
         lightboxSection.classList.remove("hidden");
@@ -173,9 +175,17 @@ productMain.addEventListener("click", () => {
 });
 
 // close icon for lightbox
+/*
 closeIcon.addEventListener("click", () => {
     lightboxSection.style.display = "none"
     mainContent.style.display = "block";
+});
+
+*/
+closeIcon.addEventListener("click", () => {
+    lightboxSection.classList.add("hidden");
+    lightboxSection.classList.remove("flex");
+    mainContent.classList.remove("hidden");
 });
 
 // Thumbnail working with product images.
