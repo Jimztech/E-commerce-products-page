@@ -34,10 +34,8 @@ main.addEventListener("click", () => {
     }
 });
 
-
 let count = 0;
 const price = 125;
-
 
 function updateUi() {
     // Update all increment-value elements
@@ -142,4 +140,59 @@ nextMobile.addEventListener("click", () => {
 previousMobile.addEventListener("click", () => {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     showImage(currentIndex);
+});
+
+
+// working with switching images for lightbox view.
+const productMain = document.getElementById("product-1");
+const lightboxSection = document.getElementById("lightbox-section");
+const closeIcon = document.getElementById("light-close-icon");
+const mainContent = document.getElementById("test-section");
+
+const thumbnails = document.querySelectorAll('[id^="light-thumbnail-"]');
+const products = document.querySelectorAll('[id^="light-product-"]');
+const nextBtn = document.getElementById("light-next-icon");
+const prevBtn = document.getElementById("light-previous-icon");
+
+// Show image by index.
+function showProduct(index) {
+    products.forEach((img, i) => {
+        img.classList.toggle("hidden", i !== index);
+    });
+    currentIndex = index;
+}
+
+// When main product image is clicked, show lightbox.
+productMain.addEventListener("click", () => {
+    if(window.innerWidth >= 900) {
+        mainContent.classList.add("hidden");
+        lightboxSection.classList.remove("hidden");
+        lightboxSection.classList.add("flex");
+        showProduct(0);
+    }
+});
+
+// close icon for lightbox
+closeIcon.addEventListener("click", () => {
+    lightboxSection.style.display = "none"
+    mainContent.style.display = "block";
+});
+
+// Thumbnail working with product images.
+thumbnails.forEach((thumb, i) => {
+    thumb.addEventListener("click", () => {
+        showProduct(i);
+    });
+});
+
+
+// Next and previous buttons for lightbox.
+nextBtn.addEventListener("click", () => {
+    const nextIndex = (currentIndex + 1) % products.length;
+    showProduct(nextIndex);
+});
+
+prevBtn.addEventListener("click", () => {
+    const prevIndex = (currentIndex - 1 + products.length) % products.length;
+    showProduct(prevIndex);
 });

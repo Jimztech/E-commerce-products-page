@@ -10,7 +10,7 @@
   <title>E-commerce product page</title>
 </head>
 <body class="font-smooth font-kumbh-sans relative z-auto">
-
+  <section id="test-section" class="">
   <header class="lg:px-[5rem]">
     <div class="flex justify-between items-center p-[1rem] fixed lg:relative z-[10] w-full bg-white lg:border-b-2 lg:border-black/30 lg:py-[2rem]">
       <div class="flex items-center justify-between gap-[1rem] lg:gap-[4rem]">
@@ -270,6 +270,99 @@
       </section>
     </section>
   </div>
+  </section>
+
+  <section 
+    class="hidden lg:flex lg:fixed lg:items-center lg:justify-center lg:inset-0 lg:z-[150] lg:bg-black/50 lg:backdrop-blur-sm"
+    id="lightbox-section"
+  >
+    <div class="p-4 relative">
+      <section class="my-4 ">
+        <img 
+          src="./images/image-product-1.jpg" 
+          alt="product image"
+          class="w-[27rem] rounded-xl"
+          id="light-product-1"
+        >
+
+        <img 
+          src="./images/image-product-2.jpg" 
+          alt="product image"
+          class="hidden w-[27rem] rounded-xl"
+          id="light-product-2"
+        >
+
+        <img 
+          src="./images/image-product-3.jpg" 
+          alt="product image"
+          class="hidden w-[27rem] rounded-xl"
+          id="light-product-3"
+        >
+
+        <img 
+          src="./images/image-product-4.jpg" 
+          alt="product image"
+          class="hidden w-[27rem] rounded-xl"
+          id="light-product-4"
+        >
+      </section>
+
+      <section class="flex gap-3 justify-center">
+        <img 
+          src="./images/image-product-1-thumbnail.jpg" 
+          alt="product image" 
+          class="lg:w-20 lg:h-20 lg:rounded-xl"
+          id="light-thumbnail-1"
+        >
+
+        <img 
+          src="./images/image-product-2-thumbnail.jpg" 
+          alt="product image" 
+          class="lg:w-20 lg:h-20 lg:rounded-xl"
+          id="light-thumbnail-2"
+        >
+
+        <img 
+          src="./images/image-product-3-thumbnail.jpg" 
+          alt="product image" 
+          class="lg:w-20 lg:h-20 lg:rounded-xl"
+          id="light-thumbnail-3"
+        >
+
+        <img 
+          src="./images/image-product-4-thumbnail.jpg" 
+          alt="product image" 
+          class="lg:w-20 lg:h-20 lg:rounded-xl"
+          id="light-thumbnail-4"
+        > 
+      </section>
+
+      <section class="relative">
+        <img 
+          src="./images/icon-previous.svg" 
+          alt="icons"
+          class="absolute -left-5 bottom-70 rounded-full bg-white p-5"
+          id="light-previous-icon"
+        >
+
+        <img 
+          src="./images/icon-next.svg" 
+          alt="icons"
+          class="absolute -right-5 bottom-70 rounded-full bg-white p-5"
+          id="light-next-icon"
+        >
+
+        <div id="light-close-icon" class="absolute -right-3 bottom-135 cursor-pointer">
+          <svg 
+            width="19" 
+            height="19" 
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#000000" fill-rule="evenodd"/>
+          </svg>
+        </div>
+      </section>
+    </div>
+  </section>
   <script type="module" src="./src/index.js"></script>
 </body>
 </html>
