@@ -13,15 +13,38 @@ const deleteIcon = document.getElementById("delete");
 const emptyCart = document.getElementById("empty-cart");
 const cartIcon = document.getElementById("cart");
 
+/*
+function toggleMenu() {
+    if(window.innerWidth < 900) {
+        navBar.classList.toggle('hidden');
+        
+        if(navBar.classList.contains('hidden')) {
+            openMenu.src = "/images/icon-menu.svg";
+        } else {
+            openMenu.src = "/images/icon-close.svg";
+        }
+    }
+}
+
+// Update main click handler too
+main.addEventListener("click", () => {
+    if(!navBar.classList.contains('hidden')) {
+        navBar.classList.add('hidden');
+        openMenu.src = "/images/icon-menu.svg";
+    }
+});
+
+*/
+
 
 function toggleMenu() {
     if(window.innerWidth < 900) {
         if(navBar.style.display === "flex") {
             navBar.style.display = "none";
-            openMenu.src = "../public/images/icon-menu.svg";
+            openMenu.src = "/images/icon-menu.svg";
         } else {
             navBar.style.display = "flex";
-            openMenu.src = "../public/images/icon-close.svg";
+            openMenu.src = "/images/icon-close.svg";
         }
     }
 }
@@ -30,9 +53,10 @@ openMenu.addEventListener("click", toggleMenu);
 main.addEventListener("click", () => {
     if(navBar.style.display === "flex") {
         navBar.style.display = "none";
-        openMenu.src = "../public/images/icon-menu.svg";
+        openMenu.src = "/images/icon-menu.svg";
     }
 });
+
 
 let count = 0;
 const price = 125;
