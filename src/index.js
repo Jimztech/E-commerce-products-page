@@ -18,10 +18,10 @@ function toggleMenu() {
     if(window.innerWidth < 900) {
         if(navBar.style.display === "flex") {
             navBar.style.display = "none";
-            openMenu.src = "./images/icon-menu.svg";
+            openMenu.src = "../public/images/icon-menu.svg";
         } else {
             navBar.style.display = "flex";
-            openMenu.src = "./images/icon-close.svg";
+            openMenu.src = "../public/images/icon-close.svg";
         }
     }
 }
@@ -30,7 +30,7 @@ openMenu.addEventListener("click", toggleMenu);
 main.addEventListener("click", () => {
     if(navBar.style.display === "flex") {
         navBar.style.display = "none";
-        openMenu.src = "./images/icon-menu.svg";
+        openMenu.src = "../public/images/icon-menu.svg";
     }
 });
 
